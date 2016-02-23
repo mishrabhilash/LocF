@@ -20,15 +20,13 @@ public class TestActivity extends AppCompatActivity {
         setContentView(R.layout.activity_test);
 
 
-        LocationFetchSettings.setApiKey("AIzaSyDkzb0hjdH46rYBoOkTJuAizqmaURY_IyI");
+        LocationFetchSettings.setApiKey("<Your Api key comes here>");
         LocationFetchAction.getLocation(this, new LocationFetchCallback() {
             @Override
             public void onSuccess(final NGLocation ngLocation) {
                 ((TextView) findViewById(R.id.tv1)).setText(ngLocation.getAccuracy()+"");
                 ((TextView) findViewById(R.id.tv2)).setText(ngLocation.getLattitude() + "");
                 ((TextView) findViewById(R.id.tv3)).setText(ngLocation.getLongitude() + "");
-
-
             }
 
             @Override
