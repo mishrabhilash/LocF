@@ -18,20 +18,19 @@ Internet must be working on the device in order to get the location
  - Thenafter, use this code to fetch loaction:
  ```sh
  LocationFetchAction.getLocation(this, new LocationFetchCallback() {
-            @Override
-            public void onSuccess(final NGLocation ngLocation) {
-                ngLocation.getAccuracy();
-                ngLocation.getLattitude();
-                ngLocation.getLongitude();
-            }
+    @Override
+    public void onSuccess(final NGLocation ngLocation) {
+      ngLocation.getAccuracy();
+      ngLocation.getLattitude();
+      ngLocation.getLongitude();
+    }
 
-            @Override
-            public void onFailure(int errorCode) {
-            }
+    @Override
+    public void onFailure(int errorCode) {
+    }
 
-            @Override
-            public void onException(Exception ex) {
-            }
-        });
-
+    @Override
+    public void onException(Exception ex) {
+    }
+  });
  ```
